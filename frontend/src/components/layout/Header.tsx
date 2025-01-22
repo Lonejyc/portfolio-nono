@@ -1,18 +1,18 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import Logo from '/public/images/logo.svg'
 
 export default function Header() {
   return (
     <header className=''>
-        <nav className='flex justify-between items-center py-5 px-16 bg-white text-black'>
-            <div className="">
-                <Link href="/">Dylan Thomas</Link>
-            </div>
-            <div className="flex gap-16">
-                <Link href="/">Accueil</Link>
-                <Link href="/about">A propos</Link>
-                <Link href="/projects">Projets</Link>
-                <Link href="/skills">Competences</Link>
-                <Link href="/contact">Contact</Link>
+        <nav className='flex justify-center items-center py-5 px-16 bg-dGreen text-white font-semibold'>
+            <div className="flex gap-20 items-center">
+              <Link href="/">
+                <Image src={Logo} alt="Logo Dylan Production"></Image>
+              </Link>
+              <Link href="/about" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Présentation</Link>
+              <Link href="/projects" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Identités</Link>
+              <Link href="/skills" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Motion</Link>
             </div>
         </nav>
     </header>
