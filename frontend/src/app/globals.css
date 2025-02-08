@@ -105,7 +105,7 @@ body {
 }
 
 .hero {
-  height: calc(100dvh - 4rem);
+  height: calc(95dvh - 4rem);
   font-family: "Soulmaze", sans-serif;
   position: relative;
 
@@ -168,4 +168,22 @@ h2 {
 
 .soulmaze {
   font-family: 'Soulmaze', sans-serif;
+}
+
+.pres {
+  .image {
+    border-radius: 5vw;
+    position: absolute;
+    width: calc(100vw - 65vw);
+    height: auto;
+  }
+  .image > img {
+    width: 100%;
+    object-fit: cover;
+    padding: 6vw;
+  }
+  .image > img:nth-child(2) {
+    width: 30%;
+    padding: 0;
+  }
 }
