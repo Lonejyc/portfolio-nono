@@ -8,6 +8,23 @@ import Arrow2 from "/public/images/arrow2.svg";
 import Arrow3 from "/public/images/arrow3.svg";
 import Hashtag from "/public/images/hashtag.svg";
 
+import VisualPres from "../components/VisualPres";
+// import datas from "../datas/content.json";
+
+interface VisualIdentity {
+  title: string;
+  description: string;
+  image: string;
+}
+
+interface Content {
+  VisualIdentity: {
+      [key: string]: VisualIdentity;
+  };
+}
+
+const content: Content = require('../datas/content.json');
+
 export default async function Home() {
   return (
     <main className="w-full">
@@ -34,7 +51,7 @@ export default async function Home() {
       <section className="pres rounded-t-xxxl bg-white text-black py-20 flex gap-16">
         <div className="content w-1/2 pl-40 relative">
           <Image src={Arrow2} alt="Flèche tordu" className="absolute top-0 left-0"></Image>
-          <h2 className="mb-10 soulmaze">Présentation</h2>
+          <h3 className="mb-10 soulmaze">Présentation</h3>
           <p className="pb-10">
               🎨 Salut, moi c’est Dylan !
               <br /><br />
@@ -54,6 +71,22 @@ export default async function Home() {
             <Image src={Head2} alt="Tête de Dylan Thomas"></Image>
             <Image src={Hashtag} alt="Hashtag" className="absolute right-0 bottom-0 translate-y-1/2 translate-x-1/3"></Image>
           </div>
+        </div>
+      </section>
+      <section className="visual text-white py-20">
+        <h2 className="text-center">Identités visuelles</h2>
+        <div className="visual-identities">
+          {Object.keys(content.VisualIdentity).map((key) => {
+            const identity = content.VisualIdentity[key];
+            return (
+              <VisualPres
+                key={key}
+                title={identity.title}
+                description={identity.description}
+                image={identity.image}
+              />
+            );
+          })}
         </div>
       </section>
     </main>
