@@ -75,7 +75,7 @@ export default async function Home() {
       </section>
       <section className="visual text-white py-20">
         <h2 className="text-center">Identités visuelles</h2>
-        <div className="visual-identities">
+        <div className="visual-identities mx-48">
           {Object.keys(content.VisualIdentity).map((key) => {
             const identity = content.VisualIdentity[key];
             return (
