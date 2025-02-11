@@ -89,6 +89,9 @@ export default async function Home() {
           })}
         </div>
       </section>
+      <section className="motions">
+        
+      </section>
     </main>
   );
 }
