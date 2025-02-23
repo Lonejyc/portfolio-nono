@@ -7,6 +7,9 @@ import Arrow1 from "/public/images/arrow1.svg";
 import Arrow2 from "/public/images/arrow2.svg";
 import Arrow3 from "/public/images/arrow3.svg";
 import Hashtag from "/public/images/hashtag.svg";
+import Volley from "/public/images/volley.jpeg";
+import Pc from "/public/images/pc.png";
+import Phone from "/public/images/phone.png";
 
 import VisualPres from "../components/VisualPres";
 import MotionPres from "../components/MotionPres";
@@ -102,7 +105,7 @@ export default async function Home() {
       </section>
       <section className="motion bg-white text-black py-20 rounded-b-xxxl">
         <h2 className="text-center">Motions</h2>
-        <div className="motions mx-48 flex flex-col gap-16">
+        <div className="motions mx-36 flex flex-col gap-16">
           {Object.keys(content.Motion).map((key) => {
             const motion = content.Motion[key];
             return (
@@ -117,9 +120,42 @@ export default async function Home() {
           })}
         </div>
       </section>
-      <section className="other text-white">
+      <section className="text-white mt-20 px-20">
         <h2 className="text-center">Autres projets</h2>
-
+        <div className="bg-dGreen p-8 rounded-3xl">
+          <div className="grid grid-cols-2 gap-8 mb-8">
+            <div className="flex flex-col">
+              <div className="rounded-3xl p-6">
+                <Image 
+                  src={Volley} 
+                  alt="Maillot de Volley"
+                  className="w-full"
+                />
+              </div>
+              <p className="mt-2">MMI volleyball</p>
+            </div>
+            <div className="flex flex-col">
+              <div className="rounded-3xl p-6">
+                <Image 
+                  src={Phone} 
+                  alt="Fond d'écran de téléphone"
+                  className="w-full"
+                />
+              </div>
+              <p className="mt-2">Fond d'écran personnel</p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col">
+            <div className="rounded-3xl p-6">
+              <Image 
+                src={Pc} 
+                alt="Fond d'écran d'ordinateur"
+                className="w-full"
+              />
+            </div>
+            <p className="mt-2">Fond d'écran d'ordinateur</p>
+          </div>
+        </div>
       </section>
     </main>
   );
