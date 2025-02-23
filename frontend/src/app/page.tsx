@@ -9,6 +9,7 @@ import Arrow3 from "/public/images/arrow3.svg";
 import Hashtag from "/public/images/hashtag.svg";
 
 import VisualPres from "../components/VisualPres";
+import MotionPres from "../components/MotionPres";
 // import datas from "../datas/content.json";
 
 interface VisualIdentity {
@@ -17,9 +18,19 @@ interface VisualIdentity {
   image: string;
 }
 
+interface Motion {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
 interface Content {
   VisualIdentity: {
       [key: string]: VisualIdentity;
+  };
+  Motion: {
+      [key: string]: Motion;
   };
 }
 
@@ -89,8 +100,26 @@ export default async function Home() {
           })}
         </div>
       </section>
-      <section className="motions">
-        
+      <section className="motion bg-white text-black py-20 rounded-b-xxxl">
+        <h2 className="text-center">Motions</h2>
+        <div className="motions mx-48 flex flex-col gap-16">
+          {Object.keys(content.Motion).map((key) => {
+            const motion = content.Motion[key];
+            return (
+              <MotionPres
+                key={key}
+                title={motion.title}
+                description={motion.description}
+                image={motion.image}
+                link={motion.link}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <section className="other text-white">
+        <h2 className="text-center">Autres projets</h2>
+
       </section>
     </main>
   );
