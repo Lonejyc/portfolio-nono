@@ -10,6 +10,9 @@ import Hashtag from "/public/images/hashtag.svg";
 import Volley from "/public/images/volley.jpeg";
 import Pc from "/public/images/pc.png";
 import Phone from "/public/images/phone.png";
+import Tache1 from "/public/images/transition/tache1.svg";
+import Tache2 from "/public/images/transition/tache2.svg";
+import Grid from "../assets/grid.svg";
 
 import VisualPres from "../components/VisualPres";
 import MotionPres from "../components/MotionPres";
@@ -42,7 +45,8 @@ const content: Content = require('../datas/content.json');
 export default async function Home() {
   return (
     <main className="w-full">
-      <section className="hero bg-dGreen text-white pt-20">
+      <section className="hero bg-dGreen text-white pt-20 relative">
+        <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] bg-[url('../assets/grid.svg')] bg-repeat p-8"></div>
         <h1 className="text-white text-9xl text-center mx-32 wide">PORTFOLIO DYLAN THOMAS</h1>
         <div className="elements">
           <div className="head">
@@ -62,7 +66,7 @@ export default async function Home() {
           <Image src={Arrow1} alt="Flèche vers le bas"></Image>
         </a>
       </section>
-      <section className="pres rounded-t-xxxl bg-white text-black py-20 flex gap-16">
+      <section className="pres rounded-t-xxxl bg-white text-black py-28 flex gap-16 relative">
         <div className="content w-1/2 pl-40 relative">
           <Image src={Arrow2} alt="Flèche tordu" className="absolute top-0 left-0"></Image>
           <h3 className="mb-10 soulmaze">Présentation</h3>
@@ -86,8 +90,9 @@ export default async function Home() {
             <Image src={Hashtag} alt="Hashtag" className="absolute right-0 bottom-0 translate-y-1/2 translate-x-1/3"></Image>
           </div>
         </div>
+        <Image src={Tache1} alt="tache de peinture" className="w-[100vw] h-[10vh] object-cover absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></Image>
       </section>
-      <section className="visual text-white py-20">
+      <section className="visual text-white py-28 relative">
         <h2 className="text-center">Identités visuelles</h2>
         <div className="visual-identities mx-48">
           {Object.keys(content.VisualIdentity).map((key) => {
@@ -102,8 +107,9 @@ export default async function Home() {
             );
           })}
         </div>
+        <Image src={Tache2} alt="tache de peinture" className="w-[100vw] h-[10vh] object-cover absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3"></Image>
       </section>
-      <section className="motion bg-white text-black py-20 rounded-b-xxxl">
+      <section className="motion bg-white text-black py-28 rounded-b-xxxl">
         <h2 className="text-center">Motions</h2>
         <div className="motions mx-36 flex flex-col gap-16">
           {Object.keys(content.Motion).map((key) => {
@@ -125,32 +131,32 @@ export default async function Home() {
         <div className="bg-dGreen p-8 rounded-3xl">
           <div className="grid grid-cols-2 gap-8 mb-8">
             <div className="flex flex-col">
-              <div className="rounded-3xl p-6">
+              <div className="rounded-3xl p-6 aspect-w-1 aspect-h-1">
                 <Image 
-                  src={Volley} 
-                  alt="Maillot de Volley"
-                  className="w-full"
+              src={Volley} 
+              alt="Maillot de Volley"
+              className="w-full h-full object-cover"
                 />
               </div>
               <p className="mt-2">MMI volleyball</p>
             </div>
             <div className="flex flex-col">
-              <div className="rounded-3xl p-6">
+              <div className="rounded-3xl p-6 aspect-w-1 aspect-h-1">
                 <Image 
-                  src={Phone} 
-                  alt="Fond d'écran de téléphone"
-                  className="w-full"
+              src={Phone} 
+              alt="Fond d'écran de téléphone"
+              className="w-full h-full object-cover"
                 />
               </div>
               <p className="mt-2">Fond d'écran personnel</p>
             </div>
-          </div>
-          <div className="w-full flex flex-col">
+              </div>
+              <div className="w-full flex flex-col">
             <div className="rounded-3xl p-6">
               <Image 
                 src={Pc} 
                 alt="Fond d'écran d'ordinateur"
-                className="w-full"
+                className="w-full h-full object-cover"
               />
             </div>
             <p className="mt-2">Fond d'écran d'ordinateur</p>
