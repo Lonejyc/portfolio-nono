@@ -19,7 +19,7 @@ const VisualPres: React.FC<VisualPresProps> = ({ title, description, image }) =>
                 alt={title} 
                 width={800} 
                 height={1000} 
-                className="object-cover w-full max-h-[1600px] shadow-md rounded-[5vw]"
+                className="object-cover w-full max-h-[1600px] shadow-md rounded-[5vw] bg-dGrayTrans backdrop-filter backdrop-blur-[8px]"
             />
         </div>
     );

@@ -46,7 +46,7 @@ export default async function Home() {
   return (
     <main className="w-full">
       <section className="hero bg-dGreen text-white pt-20 relative">
-        <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] bg-[url('../assets/grid.svg')] bg-repeat p-8"></div>
+        <div className="absolute z-0 top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-12rem)] h-[93%] bg-[url('../assets/grid.svg')] bg-repeat bg-bottom"></div>
         <h1 className="text-white text-9xl text-center mx-32 wide">PORTFOLIO DYLAN THOMAS</h1>
         <div className="elements">
           <div className="head">
@@ -62,7 +62,7 @@ export default async function Home() {
             <Image src={Illustrator} alt="Logo de Illustrator" className="logoEL shadow-md rounded-xl"></Image>
           </div>
         </div>
-        <a href="#" className="navArrow bg-white rounded-full flex justify-center items-center w-14 h-14 absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:translate-y-0.5">
+        <a href="#" className="navArrow bg-white rounded-full flex justify-center items-center w-14 h-14 absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1/4">
           <Image src={Arrow1} alt="Flèche vers le bas"></Image>
         </a>
       </section>
@@ -93,8 +93,9 @@ export default async function Home() {
         <Image src={Tache1} alt="tache de peinture" className="w-[100vw] h-[10vh] object-cover absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></Image>
       </section>
       <section className="visual text-white py-28 relative">
-        <h2 className="text-center">Identités visuelles</h2>
-        <div className="visual-identities mx-48">
+        <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-12rem)] h-[calc(100%-8rem)] bg-[url('../assets/grid.svg')] bg-repeat bg-bottom"></div>
+        <h2 className="text-center z-10">Identités visuelles</h2>
+        <div className="visual-identities mx-48 z-10">
           {Object.keys(content.VisualIdentity).map((key) => {
             const identity = content.VisualIdentity[key];
             return (
@@ -126,16 +127,17 @@ export default async function Home() {
           })}
         </div>
       </section>
-      <section className="text-white mt-20 px-20">
+      <section className="text-white mt-20 px-20 relative">
+        <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-12rem)] h-[calc(100%-8rem)] bg-[url('../assets/grid.svg')] bg-repeat bg-bottom"></div>
         <h2 className="text-center">Autres projets</h2>
-        <div className="bg-dGreen p-8 rounded-3xl">
+        <div className="bg-dGrayTrans backdrop-filter backdrop-blur-[8px] p-12 rounded-3xl">
           <div className="grid grid-cols-2 gap-8 mb-8">
             <div className="flex flex-col">
               <div className="rounded-3xl p-6 aspect-w-1 aspect-h-1">
                 <Image 
-              src={Volley} 
-              alt="Maillot de Volley"
-              className="w-full h-full object-cover"
+                  src={Volley} 
+                  alt="Maillot de Volley"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <p className="mt-2">MMI volleyball</p>
@@ -143,15 +145,15 @@ export default async function Home() {
             <div className="flex flex-col">
               <div className="rounded-3xl p-6 aspect-w-1 aspect-h-1">
                 <Image 
-              src={Phone} 
-              alt="Fond d'écran de téléphone"
-              className="w-full h-full object-cover"
+                  src={Phone} 
+                  alt="Fond d'écran de téléphone"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <p className="mt-2">Fond d'écran personnel</p>
             </div>
-              </div>
-              <div className="w-full flex flex-col">
+          </div>
+          <div className="w-full flex flex-col">
             <div className="rounded-3xl p-6">
               <Image 
                 src={Pc} 

@@ -51,7 +51,8 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			},
 			dGreen: '#007368',
-			dGray: '#F2F2F2'
+			dGray: '#F2F2F2',
+			dGrayTrans: 'rgba(255, 255, 255, 0.30)',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
