@@ -10,9 +10,9 @@ export default function Header() {
               <Link href="/">
                 <Image src={Logo} alt="Logo Dylan Production"></Image>
               </Link>
-              <Link href="/about" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Présentation</Link>
-              <Link href="/projects" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Identités</Link>
-              <Link href="/skills" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Motion</Link>
+              <Link href="#pres" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Présentation</Link>
+              <Link href="#projects" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Identités</Link>
+              <Link href="#motions" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Motion</Link>
             </div>
         </nav>
     </header>

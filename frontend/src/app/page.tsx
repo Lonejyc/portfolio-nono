@@ -66,7 +66,7 @@ export default async function Home() {
           <Image src={Arrow1} alt="Flèche vers le bas"></Image>
         </a>
       </section>
-      <section className="pres rounded-t-xxxl bg-white text-black py-28 flex gap-16 relative">
+      <section id="pres" className="pres rounded-t-xxxl bg-white text-black py-28 flex gap-16 relative">
         <div className="content w-1/2 pl-40 relative">
           <Image src={Arrow2} alt="Flèche tordu" className="absolute top-0 left-0"></Image>
           <h3 className="mb-10 soulmaze">Présentation</h3>
@@ -92,7 +92,7 @@ export default async function Home() {
         </div>
         <Image src={Tache1} alt="tache de peinture" className="w-[100vw] h-[10vh] object-cover absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></Image>
       </section>
-      <section className="visual text-white py-28 relative">
+      <section id="projects" className="visual text-white py-28 relative">
         <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-12rem)] h-[calc(100%-8rem)] bg-[url('../assets/grid.svg')] bg-repeat bg-bottom"></div>
         <h2 className="text-center z-10">Identités visuelles</h2>
         <div className="visual-identities mx-48 z-10">
@@ -110,7 +110,7 @@ export default async function Home() {
         </div>
         <Image src={Tache2} alt="tache de peinture" className="w-[100vw] h-[10vh] object-cover absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3"></Image>
       </section>
-      <section className="motion bg-white text-black py-28 rounded-b-xxxl">
+      <section id="motions" className="motion bg-white text-black py-28 rounded-b-xxxl">
         <h2 className="text-center">Motions</h2>
         <div className="motions mx-36 flex flex-col gap-16">
           {Object.keys(content.Motion).map((key) => {
@@ -127,40 +127,34 @@ export default async function Home() {
           })}
         </div>
       </section>
-      <section className="text-white mt-20 px-20 relative">
+      <section className="text-white mt-20 pb-28 px-28 relative">
         <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-12rem)] h-[calc(100%-8rem)] bg-[url('../assets/grid.svg')] bg-repeat bg-bottom"></div>
-        <h2 className="text-center">Autres projets</h2>
-        <div className="bg-dGrayTrans backdrop-filter backdrop-blur-[8px] p-12 rounded-3xl">
+        <h2 className="text-center py-8">Autres projets</h2>
+        <div className="bg-dGrayTrans backdrop-filter backdrop-blur-[8px] p-12 rounded-xxl shadow-xl">
           <div className="grid grid-cols-2 gap-8 mb-8">
             <div className="flex flex-col">
-              <div className="rounded-3xl p-6 aspect-w-1 aspect-h-1">
-                <Image 
-                  src={Volley} 
-                  alt="Maillot de Volley"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <Image 
+                src={Volley} 
+                alt="Maillot de Volley"
+                className="w-full h-full object-cover aspect-[530/676 rounded-[40px] shadow-xl"
+              />
               <p className="mt-2">MMI volleyball</p>
             </div>
             <div className="flex flex-col">
-              <div className="rounded-3xl p-6 aspect-w-1 aspect-h-1">
-                <Image 
-                  src={Phone} 
-                  alt="Fond d'écran de téléphone"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <Image 
+                src={Phone} 
+                alt="Fond d'écran de téléphone"
+                className="w-full h-full object-cover aspect-[530/676] rounded-[40px] shadow-xl"
+              />
               <p className="mt-2">Fond d'écran personnel</p>
             </div>
           </div>
           <div className="w-full flex flex-col">
-            <div className="rounded-3xl p-6">
-              <Image 
-                src={Pc} 
-                alt="Fond d'écran d'ordinateur"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <Image 
+              src={Pc} 
+              alt="Fond d'écran d'ordinateur"
+              className="w-full h-full object-cover rounded-[40px] shadow-xl"
+            />
             <p className="mt-2">Fond d'écran d'ordinateur</p>
           </div>
         </div>

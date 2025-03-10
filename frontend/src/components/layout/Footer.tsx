@@ -15,9 +15,9 @@ const Footer = () => {
         </div>
         <div className='flex flex-col items-end justify-end gap-6'>
             <nav className="flex gap-20 items-center">
-              <Link href="/about" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Présentation</Link>
-              <Link href="/projects" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Identités</Link>
-              <Link href="/skills" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Motion</Link>
+              <Link href="#pres" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Présentation</Link>
+              <Link href="#projects" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Identités</Link>
+              <Link href="#motions" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Motion</Link>
             </nav>
             <ul className="links flex gap-4 items-center">
                 <li className="flex gap-4">
