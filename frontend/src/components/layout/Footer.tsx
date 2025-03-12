@@ -9,12 +9,12 @@ import Insta from "/public/images/insta.svg";
 
 const Footer = () => {
   return (
-    <footer className='bg-white text-dGreen py-24 px-32 flex justify-between rounded-t-xxxl'>
+    <footer className='bg-white text-dGreen py-24 px-16 lg:px-24 xl:px-32 flex justify-between rounded-t-xxxl'>
         <div className="logo">
             <Image src={Logo} alt="Tête de Dylan Thomas dessiné" width="100" height="100"></Image>
         </div>
         <div className='flex flex-col items-end justify-end gap-6'>
-            <nav className="flex gap-20 items-center">
+            <nav className="hidden md:flex gap-20 items-center">
               <Link href="#pres" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Présentation</Link>
               <Link href="#projects" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Identités</Link>
               <Link href="#motions" className='border-2 border-dGreen rounded-3xl py-2 px-16 transition-all hover:bg-dGreen hover:text-white'>Motion</Link>

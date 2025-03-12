@@ -60,7 +60,10 @@ export default {
   			sm: 'calc(var(--radius) - 4px)',
 			xxl: '60px',
 			xxxl: '80px'
-  		}
+  		},
+		screens: {
+			'xs': '435px',
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

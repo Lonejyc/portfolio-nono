@@ -10,8 +10,8 @@ interface MotionPresProps {
 
 const MotionPres: React.FC<MotionPresProps> = ({ title, description, image, link }) => {
     return (
-        <div className="flex flex-row even:flex-row-reverse justify-center items-center gap-12 p-8">
-            <div className="w-1/2">
+        <div className="flex flex-col-reverse even:flex-col-reverse md:flex-row md:even:flex-row-reverse justify-center items-center gap-12 p-4">
+            <div className="w-full md:w-1/2">
                 <a href={link} target="_blank" rel="noreferrer">
                     <Image 
                         src={image} 
@@ -22,7 +22,7 @@ const MotionPres: React.FC<MotionPresProps> = ({ title, description, image, link
                     />
                 </a>
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
                 <h3 className="mb-6 text-black self-start uppercase">{title}</h3>
                 <p className="text-black whitespace-pre-line leading-relaxed">
                     {description}
