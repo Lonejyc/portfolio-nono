@@ -19,15 +19,15 @@ export default function Header() {
           <Link href="/">
             <Image src={Logo} alt="Logo Dylan Production"></Image>
           </Link>
-          <div className="md:hidden">
+          <div className="z-20 md:hidden">
             <button onClick={toggleMenu} className="text-white">
               {isOpen ? <FaTimes size={46} /> : <FaBars size={46} />}
             </button>
           </div>
-          <div className={`flex-col md:flex-row md:flex gap-20 items-center ${isOpen ? 'flex' : 'hidden'} md:flex`}>
-            <Link href="#pres" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Présentation</Link>
-            <Link href="#projects" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Identités</Link>
-            <Link href="#motions" className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Motion</Link>
+          <div className={`flex-col md:flex-row md:flex gap-20 items-center ${isOpen ? 'flex absolute top-0 left-0 w-full h-dvh z-10 bg-dGreen justify-center overflow-y-hidden' : 'hidden'} md:flex`}>
+            <Link href="#pres" onClick={toggleMenu} className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Présentation</Link>
+            <Link href="#projects" onClick={toggleMenu} className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Identités</Link>
+            <Link href="#motions" onClick={toggleMenu} className='border-2 border-white rounded-3xl py-2 px-16 transition-all hover:bg-white hover:text-dGreen'>Motion</Link>
           </div>
         </nav>
       </header>
