@@ -9,7 +9,7 @@ import Insta from "/public/images/insta.svg";
 
 const Footer = () => {
   return (
-    <footer className='bg-white text-dGreen py-24 px-16 lg:px-24 xl:px-32 flex justify-between rounded-t-xxxl'>
+    <footer className='bg-white text-dGreen py-24 px-16 lg:px-24 xl:px-32 flex justify-between rounded-t-xxl md:rounded-t-xxxl'>
         <div className="logo">
             <Image src={Logo} alt="Tête de Dylan Thomas dessiné" width="100" height="100"></Image>
         </div>

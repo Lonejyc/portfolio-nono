@@ -66,7 +66,7 @@ export default async function Home() {
           <Image src={Arrow1} alt="Flèche vers le bas"></Image>
         </a>
       </section>
-      <section id="pres" className="flex flex-col md:flex-row relative bg-white text-black py-28 gap-4 md:gap-16 rounded-t-xxxl">
+      <section id="pres" className="flex flex-col md:flex-row relative bg-white text-black py-28 gap-4 md:gap-16 rounded-t-xxl md:rounded-t-xxxl">
         <div className="content w-full md:w-1/2 pl-16 pr-16 md:pl-36 lg:pl-40 md:pr-0 relative">
           <Image src={Arrow2} alt="Flèche tordu" className="absolute hidden md:flex top-0 left-0"></Image>
           <h3 className="mb-10 soulmaze">Présentation</h3>
@@ -110,7 +110,7 @@ export default async function Home() {
         </div>
         <Image src={Tache2} alt="tache de peinture" className="w-[100vw] h-[10vh] object-cover absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3"></Image>
       </section>
-      <section id="motions" className="motion bg-white text-black py-28 rounded-b-xxxl">
+      <section id="motions" className="motion bg-white text-black py-28 rounded-b-xxl md:rounded-b-xxxl">
         <h2 className="text-center">Motions</h2>
         <div className="mx-[5vw] md:mx-[8vw] flex flex-col gap-4 md:gap-16">
           {Object.keys(content.Motion).map((key) => {
@@ -130,13 +130,13 @@ export default async function Home() {
       <section className="text-white mt-20 pb-28 px-12 md:px-28 relative">
         <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-6rem)] md:w-[calc(100%-12rem)] h-[calc(100%-8rem)] bg-[url('../assets/grid.svg')] bg-repeat bg-bottom"></div>
         <h2 className="text-center py-8">Autres projets</h2>
-        <div className="bg-dGrayTrans backdrop-filter backdrop-blur-[8px] p-12 rounded-xxl shadow-xl">
+        <div className="bg-dGrayTrans backdrop-filter backdrop-blur-[8px] p-12 rounded-3xl md:rounded-xxl shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="flex flex-col">
               <Image 
                 src={Volley} 
                 alt="Maillot de Volley"
-                className="w-full h-full object-cover aspect-[530/676] rounded-[40px] shadow-xl"
+                className="w-full h-full object-cover aspect-[530/676] rounded-3xl md:rounded-[40px] shadow-xl"
               />
               <p className="mt-2">MMI volleyball</p>
             </div>
@@ -144,7 +144,7 @@ export default async function Home() {
               <Image 
                 src={Phone} 
                 alt="Fond d'écran de téléphone"
-                className="w-full h-full object-cover aspect-[530/676] rounded-[40px] shadow-xl"
+                className="w-full h-full object-cover aspect-[530/676] rounded-3xl md:rounded-[40px] shadow-xl"
               />
               <p className="mt-2">Fond d'écran personnel</p>
             </div>
@@ -153,7 +153,7 @@ export default async function Home() {
             <Image 
               src={Pc} 
               alt="Fond d'écran d'ordinateur"
-              className="w-full h-full object-cover rounded-[40px] shadow-xl"
+              className="w-full h-full object-cover rounded-2xl md:rounded-[40px] shadow-xl"
             />
             <p className="mt-2">Fond d'écran d'ordinateur</p>
           </div>
